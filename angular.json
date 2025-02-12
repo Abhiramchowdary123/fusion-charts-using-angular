@@ -97,7 +97,21 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "scripts": [
+  "node_modules/fusioncharts/fusioncharts.js",
+  "node_modules/fusioncharts/fusioncharts.charts.js",
+  "node_modules/fusioncharts/themes/fusioncharts.theme.fusion.js"
+],
+"architect": {
+  "build": {
+    "options": {
+      "aot": false
+    }
+  }
+}
+
+
           }
         }
       }
