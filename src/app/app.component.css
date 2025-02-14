@@ -1,0 +1,30 @@
+.chart-container {
+  display: flex;
+  flex-direction: row;  /* Ensure side-by-side layout */
+  flex-wrap: nowrap;  /* Prevent stacking */
+  justify-content: space-between; /* Add spacing */
+  align-items: center; /* Align charts to center */
+  width: 100%; /* Full width */
+  gap: 20px; /* Space between charts */
+}
+
+.chart-box {
+  flex: 1;  /* Equal width for both charts */
+  max-width: 48%;  /* Prevents exceeding width */
+  min-width: 400px; /* Ensures charts don't shrink too much */
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Ensure charts are responsive */
+@media (max-width: 1024px) {
+  .chart-container {
+    flex-wrap: wrap; /* Stack charts when screen is smaller */
+  }
+  .chart-box {
+    max-width: 100%; /* Full width when stacked */
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "/fusioncharts.excelexport.js": {
+      "target": "http://localhost:4200/assets/fusioncharts/",
+      "pathRewrite": { "^/fusioncharts.excelexport.js": "fusioncharts.excelexport.js" },
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
+  

@@ -1,5 +1,103 @@
-<!-- Subscribers Tab -->
-<app-bar-chart [Chartdata]="Chartdata" [chartCaption]="chartCaption"></app-bar-chart>
-<app-piechart [Chartdata]="Chartdata" [chartCaption]="chartCaption"></app-piechart>
-<app-doughnut-chart [Chartdata]="Chartdata" [chartCaption]="chartCaption"></app-doughnut-chart>
-<app-line-chart [Chartdata]="Chartdata" [chartCaption]="chartCaption"></app-line-chart>
+<mat-tab-group>
+  <!-- Subscriber Tab -->
+  <mat-tab label="Subscriber Report">
+    <h3 class="chart-title">Subscriber Distribution & Last 7 Days Creation</h3>
+    <div class="chart-container">
+      <div class="chart-box">
+        <app-doughnut-chart [Chartdata]="doughnutChartsubscriberReportTo"></app-doughnut-chart>
+      </div>
+      <div class="chart-box">
+        <app-bar-chart [Chartdata]="barChartsubscribersCreatedLast7DaysForGraphToList"></app-bar-chart>
+      </div>
+    </div>
+  </mat-tab>
+
+  <!-- Partner Tab -->
+  <mat-tab label="Partner Report">
+    <h3 class="chart-title">Partner PreCaf Counts & Franchise Status</h3>
+    <div class="chart-container">
+      <div class="chart-box">
+        <app-doughnut-chart [Chartdata]="doughnutChartpartnerWisePreCafCountToList"></app-doughnut-chart>
+      </div>
+      <div class="chart-box">
+        <app-bar-chart [Chartdata]="barChartfranchiseWithStatusList"></app-bar-chart>
+      </div>
+    </div>
+
+    <h3 class="chart-title">Subscriber Universe</h3>
+    <div class="chart-container">
+      <div class="chart-box">
+        <app-piechart [Chartdata]="piechartpartnerSubscriberUniverseCounts" [Charttype]="pie3d"></app-piechart>
+      </div>
+      <div class="chart-box">
+        <app-doughnut-chart [Chartdata]="doughnutChartpartnersOnboardToList"></app-doughnut-chart>
+      </div>
+    </div>
+  </mat-tab>
+
+  <!-- Subscription Tab -->
+  <mat-tab label="Subscription Report">
+    <h3 class="chart-title">Renewal Pending & Active Subscription Packages</h3>
+    <div class="chart-container">
+      <div class="chart-box">
+        <app-piechart [Chartdata]="piechartoperatorSummaryRenewalPendingCountTo" [Charttype]="pie2d"></app-piechart>
+      </div>
+      <div class="chart-box">
+        <app-piechart [Chartdata]="piechartpricePackageWiseActiveSubscriptonsCountForGraphToList" [Charttype]="pie2d"></app-piechart>
+      </div>
+    </div>
+
+    <h3 class="chart-title">Live TV & Broadband Collections</h3>
+    <div class="chart-container">
+      <div class="chart-box">
+        <app-piechart [Chartdata]="piechartliveTvPackageWiseCollectionsList" [Charttype]="pie2d"></app-piechart>
+      </div>
+      <div class="chart-box">
+        <app-piechart [Chartdata]="piechartbroadbandPackageWiseCollectionsList" [Charttype]="pie2d"></app-piechart>
+      </div>
+    </div>
+  </mat-tab>
+
+  <!-- Inventory Tab -->
+  <mat-tab label="Inventory Report">
+    <h3 class="chart-title">Inventory Overview</h3>
+    <div class="chart-container">
+      <div class="chart-box">
+        <app-stacked-barchart [Chartdata]="barchartwarehouseStockCountTOList"></app-stacked-barchart>
+      </div>
+      <div class="chart-box">
+        <app-line-chart [Chartdata]="lineChartlast7DaysDeviceAllocationList"></app-line-chart>
+      </div>
+    </div>
+  </mat-tab>
+  <!-- collections tab -->
+  <mat-tab label="collections">
+  <div class="chart-container">
+    <!-- Live TV Package Collections -->
+    <div class="chart-box">
+      <h3 class="chart-title">Live TV Package Collections</h3>
+      <app-bar-chart [Chartdata]="barchartliveTvPackageWiseCollectionsList"></app-bar-chart>
+    </div>
+
+    <!-- Broadband Package Collections -->
+    <div class="chart-box">
+      <h3 class="chart-title">Broadband Package Collections</h3>
+      <app-piechart [Chartdata]="piechartbroadbandPackageWiseCollectionsList" [Charttype]="pie3d"></app-piechart>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <!-- VAS Package Collections -->
+    <div class="chart-box">
+      <h3 class="chart-title">VAS Package Collections</h3>
+      <app-piechart [Chartdata]="piechartvasPackageWiseCollectionsList" [Charttype]="pie2d"></app-piechart>
+    </div>
+
+    <!-- Operator Summary Collections -->
+    <div class="chart-box">
+      <h3 class="chart-title">Operator Summary Collections</h3>
+      <app-piechart [Chartdata]="piechartoperatorSummaryCollectionCountTo" [Charttype]="pie3d"></app-piechart>
+    </div>
+  </div>
+</mat-tab>
+</mat-tab-group>

@@ -1,0 +1,11 @@
+:host ::ng-deep .fusioncharts-container {
+  background: transparent !important;
+}
+
+:host ::ng-deep .chart-container {
+  background: transparent !important;
+}
+
+.fusioncharts-container {
+  background-color: white !important;
+}

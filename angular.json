@@ -37,6 +37,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -95,6 +96,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -109,7 +111,32 @@
       "aot": false
     }
   }
+},
+"scripts": [
+  "node_modules/fusioncharts/fusioncharts.excelexport.js",
+  "node_modules/fusioncharts/fusioncharts.js",
+  "node_modules/fusioncharts/fusioncharts.charts.js",
+  "node_modules/fusioncharts/themes/fusioncharts.theme.fusion.js",
+  "node_modules/fusioncharts/fusioncharts.excelexport.js"
+],
+"assets": [
+  "src/assets",
+  {
+    "glob": "**/*",
+    "input": "node_modules/@fusioncharts/",
+    "output": "/assets/fusioncharts/"
+  }
+],
+"serve": {
+  "options": {
+    "proxyConfig": "proxy.conf.json"
+  }
 }
+
+
+
+
+
 
 
           }

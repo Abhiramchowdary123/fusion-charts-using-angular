@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* CSS  to hide  */
+g.raphael-group-hfqkprRO {
+  display: none;
+}
+/* Hide FusionCharts watermark */
+g[transform^="translate"][fill="#b1b2b7"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
